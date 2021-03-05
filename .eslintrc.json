@@ -22,11 +22,6 @@
     "@typescript-eslint/no-use-before-define": [
       "error"
     ],
-    "settings": {
-      "import/resolver": {
-        "typescript": {}
-      }
-    },
     "import/extensions": [
       "error",
       "ignorePackages",
@@ -35,5 +30,10 @@
       }
     ],
     "prettier/prettier": "error"
+  },
+  "settings": {
+    "import/resolver": {
+      "typescript": {}
+    }
   }
 }
