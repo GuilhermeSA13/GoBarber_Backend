@@ -1,12 +1,12 @@
 import { Router } from 'express';
-import { startOfHour, parseISO, isEqual } from 'date-fns';
-import Appointment from '../models/Appointment';
+import { startOfHour, parseISO } from 'date-fns';
 import AppointmentsRepository from '../repositories/AppointmentsRepository';
 
 const appointmentsRouter = Router();
 const appointmentsRepository = new AppointmentsRepository();
 
-appointmentsRouter.get('/', (requets, response) => {
+appointmentsRouter.get('/', (request, response) => {
+  const appointments = appointmentsRepository.all();
   return response.json(appointments);
 });
 
